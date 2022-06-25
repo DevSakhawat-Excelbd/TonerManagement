@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Toner.Domain.Entities.UsesDetail>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UsesDetailId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrevCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CurCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TonerPercentage)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsesDetailId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrevCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TonerPercentage)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { usesDetailId =item.UsesDetailId }) |
+                @Html.ActionLink("Details", "Details", new { usesDetailId =item.UsesDetailId }) |
+                @Html.ActionLink("Delete", "Delete", new { usesDetailId =item.UsesDetailId })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

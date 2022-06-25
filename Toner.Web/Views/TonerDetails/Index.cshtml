@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Toner.Domain.Entities.TonerDetail>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TonerDetailId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalMachineToner)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CurrentTonerStock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InHouseTotalToner)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastMonthTotalTonerStock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MonthlyDeliveryToner)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalTonerStock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MonthlyUsedToner)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TonerDetailId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalMachineToner)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentTonerStock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InHouseTotalToner)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastMonthTotalTonerStock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MonthlyDeliveryToner)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalTonerStock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MonthlyUsedToner)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  tonerDetailId=item.TonerDetailId  }) |
+                @Html.ActionLink("Details", "Details", new { tonerDetailId=item.TonerDetailId }) |
+                @Html.ActionLink("Delete", "Delete", new { tonerDetailId=item.TonerDetailId })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

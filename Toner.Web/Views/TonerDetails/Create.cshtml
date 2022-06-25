@@ -1,0 +1,139 @@
+﻿@model Toner.Domain.Entities.TonerDetail
+
+@{
+   ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>TonerDetail</h4>
+<hr />
+<div class="row">
+   <div class="col-md-4">
+      <form asp-action="Create">
+         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+         @*            <div class="form-group">
+         <label asp-for="TonerDetailId" class="control-label"></label>
+         <input asp-for="TonerDetailId" class="form-control" />
+         <span asp-validation-for="TonerDetailId" class="text-danger"></span>
+         </div>*@
+
+         @*
+         <div class="form-group">
+         <label asp-for="TotalMachineToner" class="control-label"></label>
+         <input asp-for="TotalMachineToner" class="form-control" />
+         <span asp-validation-for="TotalMachineToner" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+         <label asp-for="CurrentTonerStock" class="control-label"></label>
+         <input asp-for="CurrentTonerStock" class="form-control" />
+         <span asp-validation-for="CurrentTonerStock" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+         <label asp-for="InHouseTotalToner" class="control-label"></label>
+         <input asp-for="InHouseTotalToner" class="form-control" />
+         <span asp-validation-for="InHouseTotalToner" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+         <label asp-for="LastMonthTotalTonerStock" class="control-label"></label>
+         <input asp-for="LastMonthTotalTonerStock" class="form-control" />
+         <span asp-validation-for="LastMonthTotalTonerStock" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+         <label asp-for="MonthlyDeliveryToner" class="control-label"></label>
+         <input asp-for="MonthlyDeliveryToner" class="form-control" />
+         <span asp-validation-for="MonthlyDeliveryToner" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+         <label asp-for="TotalTonerStock" class="control-label"></label>
+         <input asp-for="TotalTonerStock" class="form-control" />
+         <span asp-validation-for="TotalTonerStock" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+         <label asp-for="MonthlyUsedToner" class="control-label"></label>
+         <input asp-for="MonthlyUsedToner" class="form-control" />
+         <span asp-validation-for="MonthlyUsedToner" class="text-danger"></span>
+         </div>
+         *@
+
+         <div>
+            <table id="TonerCreateTable" class="table">
+               <thead>
+                  <tr>
+                     <th>
+                        <label asp-for="TotalMachineToner" class="control-label"></label>
+                     </th>
+                     <th>
+                        <label asp-for="CurrentTonerStock" class="control-label"></label>
+                     </th>
+                     <th>
+                        <label asp-for="InHouseTotalToner" class="control-label"></label>
+                     </th>
+                     <th>
+                        <label asp-for="LastMonthTotalTonerStock" class="control-label"></label>
+                     </th>
+                     <th>
+                        <label asp-for="MonthlyDeliveryToner" class="control-label"></label>
+                     </th>
+                     <th>
+                        <label asp-for="TotalTonerStock" class="control-label"></label>
+                     </th>
+                     <th>
+                        <label asp-for="MonthlyUsedToner" class="control-label"></label>
+                     </th>
+                     <th></th>
+                  </tr>
+               </thead>
+               <tbody>
+
+                  <tr class="tonerDetailItem">
+                     <td id="col0">
+                        <input asp-for="TotalMachineToner" class="form-control" />
+                     </td>
+                     <td id="col1">
+                        <input asp-for="CurrentTonerStock" class="form-control" />
+                     </td>
+                     <td id="col2">
+                        <input asp-for="InHouseTotalToner" readonly class="form-control" />
+                     </td>
+                     <td id="col3">
+                        <input asp-for="LastMonthTotalTonerStock" class="form-control" />
+                     </td>
+                     <td id="col4">
+                        <input asp-for="MonthlyDeliveryToner" class="form-control" />
+                     </td>
+                     <td id="col5">
+                        <input asp-for="TotalTonerStock" class="form-control" />
+                     </td>
+                     <td id="col6">
+                        <input asp-for="MonthlyUsedToner" class="form-control" />
+                     </td>
+                     <td id="col7">
+                        <button type="button" onclick="addRowsTonerDetail()" class="btn btn-primary btnAddTonerDetail">Add</button>
+                        <button type="button" onclick="deleteRowsTonerDetail()" class="btn btn-danger btnTonerDetail">Delete</button>
+                     </td>
+                  </tr>
+
+               </tbody>
+            </table>
+
+
+
+
+
+         </div>
+
+
+
+
+         <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary" />
+         </div>
+      </form>
+   </div>
+</div>
+
+<div>
+   <a asp-action="Index">Back to List</a>
+</div>
+

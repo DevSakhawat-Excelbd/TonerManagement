@@ -1,0 +1,94 @@
+﻿@model Toner.Domain.Entities.UsesDetail
+
+@{
+   ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>UsesDetail</h4>
+<hr />
+<div class="row">
+   <div class="col-md-4">
+      <form asp-action="Create">
+         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+         @*            <div class="form-group">
+         <label asp-for="UsesDetailId" class="control-label"></label>
+         <input asp-for="UsesDetailId" class="form-control" />
+         <span asp-validation-for="UsesDetailId" class="text-danger"></span>
+         </div>*@
+
+
+         @*         <div class="form-group">
+         <label asp-for="PrevCount" class="control-label"></label>
+         <input asp-for="PrevCount" class="form-control Prev_Count" />
+         <span asp-validation-for="PrevCount" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+         <label asp-for="CurCount" class="control-label"></label>
+         <input asp-for="CurCount" class="form-control Cur_Count" />
+         <span asp-validation-for="CurCount" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+         <label asp-for="TotalCount" class="control-label"></label>
+         <input asp-for="TotalCount" class="form-control Total_Count" />
+         <span asp-validation-for="TotalCount" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+         <label asp-for="TonerPercentage" class="control-label"></label>
+         <input asp-for="TonerPercentage" class="form-control" />
+         <span asp-validation-for="TonerPercentage" class="text-danger"></span>
+         </div>*@
+         <div>
+            <table id="UsesCreateTable" class="table">
+               <thead>
+                  <tr>
+                     <th>
+                        <label asp-for="PrevCount" class="control-label"></label>
+                     </th>
+                     <th>
+                        <label asp-for="CurCount" class="control-label"></label>
+                     </th>
+                     <th>
+                        <label asp-for="TotalCount" class="control-label"></label>
+                     </th>
+                     <th>
+                        <label asp-for="TonerPercentage" class="control-label"></label>
+                     </th>
+                     <th></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr class="item">
+                     <td id="col0">
+                        <input asp-for="PrevCount" class="form-control Prev_Count" />
+                     </td>
+                     <td id="col1">
+                        <input asp-for="CurCount" class="form-control Cur_Count" />
+                     </td>
+                     <td id="col2">
+                        <input asp-for="TotalCount" class="form-control Total_Count" />
+                     </td>
+                     <td id="col3">
+                        <input asp-for="TonerPercentage" class="form-control" />
+                     </td>
+                     <td id="col4">
+                       <button type="button" class="btn btn-primary btnAddUses" onclick="addRowsUses()">Add</button>
+                        <button type="button" class="btn btn-danger btnDeleteUses" onclick="deleteRowsUses()">Delete</button>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+
+         <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary" />
+         </div>
+      </form>
+   </div>
+</div>
+
+<div>
+   <a asp-action="Index">Back to List</a>
+</div>
+

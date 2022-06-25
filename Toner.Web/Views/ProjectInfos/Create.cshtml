@@ -1,0 +1,94 @@
+﻿@model Toner.Domain.Entities.ProjectInfo
+
+@{
+   ViewData["Title"] = "Create";
+}
+
+@*<h1>Create</h1>*@
+@*<h1 class="text-center">Project Information Create</h1>*@
+<hr />
+<div class="row">
+   <h1 class="text-center">Project Information Create</h1>
+   <hr />
+   <div class="col-12">
+
+@*      <div class="mb-3 row">
+         <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+         <div class="col-sm-10">
+            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+         </div>
+      </div>
+      <div class="mb-3 row">
+         <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+         <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword">
+         </div>
+      </div>*@
+
+      <form asp-action="Create">
+         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+         @*
+           <div class="form-group">
+            <label asp-for="ProjectName" for="prjectName" class="control-label"></label>
+            <input asp-for="ProjectName" class="form-control" id="prjectName" />
+            <span asp-validation-for="ProjectName" class="text-danger"></span>
+         </div>
+         
+         <div class="form-group">
+            <label asp-for="ContactNumber" class="control-label"></label>
+            <input asp-for="ContactNumber" class="form-control" />
+            <span asp-validation-for="ContactNumber" class="text-danger"></span>
+         </div>         
+         <div class="form-group">
+            <label asp-for="Address" class="control-label"></label>
+            <input asp-for="Address" class="form-control" />
+            <span asp-validation-for="Address" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+            <label asp-for="CustomerId" class="control-label"></label>
+            <input asp-for="CustomerId" class="form-control" />
+            <span asp-validation-for="CustomerId" class="text-danger"></span>
+         </div>
+
+         *@
+         
+         <div class="mb-3 row">
+            <label asp-for="ProjectName" for="prjectName" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+               <input  asp-for="ProjectName" class="form-control" id="prjectName">
+               <span asp-validation-for="ProjectName" class="text-danger"></span>
+            </div>
+         </div>
+         <div class="mb-3 row">
+            <label asp-for="ContactNumber" for="contactNumber" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+               <input  asp-for="ContactNumber" class="form-control" id="contactNumber">
+               <span asp-validation-for="ContactNumber" class="text-danger"></span>
+            </div>
+         </div>
+         <div class="mb-3 row">
+            <label asp-for="Address" for="address" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+               <input  asp-for="Address" class="form-control" id="address">
+               <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+         </div>
+         <div class="mb-3 row">
+            <label asp-for="CustomerId" for="customerId" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+               <input  asp-for="CustomerId" class="form-control" id="customerId">
+               <span asp-validation-for="CustomerId" class="text-danger"></span>
+            </div>
+         </div>
+         <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary" />
+            <a asp-action="Index" class="btn btn-link">Back to List</a>
+         </div>
+      </form>
+   </div>
+</div>
+@*
+<div>
+   <a asp-action="Index">Back to List</a>
+</div>*@
+
